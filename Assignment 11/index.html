@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        h1{
+            text-align: center;
+            line-height: 70px;
+        }
+        .con{
+            height: 550px;
+        }
+        .top{
+            height: 40%;
+            width: 100%;
+            /* background-color: aliceblue; */
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border-radius: 10%;
+            animation-name: color;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes color{
+            0%{
+                background-color: red;
+            }
+            33%{
+                background-color: blue;
+            }
+            66%{
+                background-color: green;
+            }
+            100%{
+                background-color: orange;
+            }
+        }
+        .box2{
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+            border-radius: 10%;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move{
+            0%{
+                transform: translate(0,0);
+            }
+            33%{
+                transform: translate(0,50px);
+            }
+            66%{
+                transform: translate(0,-50px);
+            }
+            100%{
+                transform: translate(0,0);
+            }
+        }
+        .box3{
+            height: 100px;
+            width: 100px;
+            background-color: purple;
+            border-radius: 10%;
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            75%{
+                transform: rotate(270deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .box4{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            border-radius: 10%;
+            animation-name: pulse;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .box5{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            border-radius: 10%;
+            animation-name: fade;
+            animation-duration: 5s;
+        }
+        @keyframes fade{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: .5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .box6{
+            height: 100px;
+            width: 100px;
+            border: 10px solid white;
+            border-top: 10px solid pink;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: unknown;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes unknown{
+            /* 0%{
+                transform: rotate(0deg);
+            } */
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        h4{
+            text-align: center;
+            color: white;
+            line-height: 90px;
+        }
+        .bottom{
+            height: 70%;
+            width: 100%;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .sq{
+            height: 350px;
+            width: 350px;
+            border: 2px dotted black;
+        }
+        .b{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            animation-name: moving;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes moving{
+            0%{
+                transform: translate(0,0);
+            }
+            25%{
+                transform: translate(250px,0);
+            }
+            50%{
+                transform: translate(250px,250px);
+            }
+            75%{
+                transform: translate(0,250px);
+            }
+            100%{
+                transform: translate(0,0);
+            }
+        }
+        .a{
+            height: 250px;
+            width: 350px;
+            gap: 2px;
+            border: 2px dotted black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .google{
+            height: 50px;
+            width: 50px;
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            animation-name: ek;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes ek{
+            0%,100%{
+                transform: translate(0);
+            }
+            33%{
+                transform: translate(0,-30px);
+            }
+        }
+        .g1{
+            background-color: blue;
+        }
+        .g1{
+            background-color: yellow;
+        }
+        .g2{
+            background-color: green;
+            animation-delay: .3s;
+        }
+        .g3{
+            background-color: orange;
+            animation-delay: .6s;
+        }
+        .g4{
+            background-color: red;
+            animation-delay: .9s;
+        }
+        .g5{
+            background-color: red;
+            animation-delay: 1.2s;
+        }
+        h3{
+            position: absolute;
+            right: 874px;
+            top: 280px;
+        }
+        h2{
+            position: absolute;
+            right: 320px;
+            top: 300px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1>CSS</h1>
+        <div class="top">
+            <div class="box1"><h4>Color</h4></div>
+            <div class="box2"><h4>Move</h4></div>
+            <div class="box3"><h4>Rotate</h4></div>
+            <div class="box4"><h4>Pulse</h4></div>
+            <div class="box5"><h4>Fade</h4></div>
+            <div class="box6"><h4 style="color: black;">Load</h4></div>
+        </div>
+        <h3 align="left">Square</h3>
+        <div class="bottom">
+            <div class="sq">
+                <div class="b"></div>
+            </div>
+            <div class="a">
+                <h2 align="center">Google</h2>
+                <div class="google g1"></div>
+                <div class="google g2"></div>
+                <div class="google g3"></div>
+                <div class="google g4"></div>
+                <div class="google g5"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
